@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome to The Beaches of America</h1>
+                <p>View beaches from all over the United States</p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="/beaches/new">Add New Beach</a>
+                </p>  
+            </div>                      
+        </header> 
+
+        <div class="row text-center">
+            <% beaches.forEach(function(beach) { %>
+                <div class="col-md-3 col-sm-6 mt-3">
+                    <div class="card">
+                        <img src="<%= beach.image %>" class="card-img-top" alt="">
+                        <h4 class="card-title"><%= beach.name %></h4>   
+                    </div>      
+                   </div>
+                <% }); %>
+           </div>
+        </div>
+    
+    
+        
+
+<% include partials/footer %>
